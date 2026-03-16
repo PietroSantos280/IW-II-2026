@@ -76,7 +76,7 @@ var senha = parseInt(prompt("digite uma senha: "));
 while(true){
     var entrada1 = prompt("digite o nome do seu usuario: ");
     var entrada2 = parseInt(prompt("digite sua senha: "));
-    if ((entrada1 == usuario) || (entrada2 == senha)){
+    if ((entrada1 == usuario) && (entrada2 == senha)){
         console.log("você logou");
         break
     } else{
