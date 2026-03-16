@@ -83,3 +83,33 @@ while(true){
         console.log("tente novamente")
     }
 }
+//9.Soma de Números Positivos
+//Peça ao usuário vários números e some-os até que ele digite um número negativo,então exiba o total.
+console.log("Exercicio 9");
+var soma = 0;
+while(true){
+    var number = parseFloat(prompt("digite o numero para ser somado: "));   
+    if (number <0){
+        console.log("a soma do numeros digitado é de: " + soma);
+        break
+    }else{
+        soma = soma + number;
+    }
+}
+//10.Adivinhação
+//Escolha um número aleatório de 1 a 10 e peça ao usuário para adivinhar.Dê dicas até ele acertar.
+console.log("Exercico 10");
+var alt = Math.floor(Math.random() * 10);
+var palpite;
+while(true){
+    palpite = parseInt(prompt("Adivinhe o número:"));
+    if (palpite == alt){
+        console.log("PARABÉNS VOCÊ ACERTOU O NÚMERO")
+        break
+    }else if(palpite < alt){
+        alert("O número é MAIOR!");
+    } 
+    else{
+        alert("O número é MENOR!");
+    }
+}
