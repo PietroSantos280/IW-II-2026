@@ -42,7 +42,7 @@ for(var m = 1; m<11;m++){
 //Solicite um número e some todos os números de 1 até ele
 console.log("Exercicio 6");
 num = parseInt(prompt("digite um numero para ser somado: "));
-num = num+1;
+num = num + 1;
 for(var s = 1; s<num; s++){
     soma = 0 + s;
     console.log(soma);
@@ -111,5 +111,98 @@ while(true){
     } 
     else{
         alert("O número é MENOR!");
+    }
+}
+//11.Cálculo de Fatorial
+//Peça um número e exiba seu fatorial(n!).
+console.log("Exercico 11");
+var numero = parseInt(prompt("Digite um número:"));
+if (numero < 0){
+    console.log("Fatorial não existe para números negativos.");
+} else {
+    var fatorial = 1;
+    for (var i = 1; i <= numero; i++) {
+        fatorial *= i;
+    }
+    }
+    console.log("O fatorial de " + numero + " é: " + fatorial);
+
+//12.Validação de Nota
+// Peça uma nota de 0 a 10 e continue pedindo até que o usuário insira um valor válido.
+console.log("Exercicio 12");
+
+var nota;
+
+while (true) {
+    nota = parseFloat(prompt("Digite uma nota de 0 a 10:"));
+
+    if (nota >= 0 && nota <= 10) {
+        console.log("Nota válida: " + nota);
+        break;
+    } else {
+        console.log("Valor inválido, tente novamente.");
+    }
+}
+//13.Média de Notas
+// Peça 3 notas ao usuário, calcule e exiba sua média.Informe se ele foi aprovado(média≥7)ou reprovado
+console.log("Exercicio 13");
+
+var nota1 = parseFloat(prompt("Digite a primeira nota:"));
+var nota2 = parseFloat(prompt("Digite a segunda nota:"));
+var nota3 = parseFloat(prompt("Digite a terceira nota:"));
+
+var media = (nota1 + nota2 + nota3) / 3;
+
+console.log("Média: " + media.toFixed(2));
+
+if (media >= 7) {
+    console.log("Aprovado!");
+} else {
+    console.log("Reprovado!");
+}
+//14.Caixa Eletrônico
+// Peça um valor ao usuário e informe as possíveis cédulas para saque(100, 50,20,10,5,2,1).
+console.log("Exercicio 14");
+
+var valor = parseInt(prompt("Digite o valor para saque:"));
+
+var notas100 = Math.floor(valor / 100);
+valor %= 100;
+
+var notas50 = Math.floor(valor / 50);
+valor %= 50;
+
+var notas20 = Math.floor(valor / 20);
+valor %= 20;
+
+var notas10 = Math.floor(valor / 10);
+valor %= 10;
+
+var notas5 = Math.floor(valor / 5);
+valor %= 5;
+
+var notas2 = Math.floor(valor / 2);
+valor %= 2;
+
+var notas1 = valor;
+
+console.log("Notas de 100: " + notas100);
+console.log("Notas de 50: " + notas50);
+console.log("Notas de 20: " + notas20);
+console.log("Notas de 10: " + notas10);
+console.log("Notas de 5: " + notas5);
+console.log("Notas de 2: " + notas2);
+console.log("Notas de 1: " + notas1);
+
+//15.
+// Números Ímpares
+// Peça um número ao usuário e exiba todos os números ímpares de 1 até esse número.
+console.log("Exercicio 15");
+
+var num = parseInt(prompt("Digite um número:"));
+
+for (var i = 1; i <= num; i++) {
+    if (i % 2 !== 0) {
+        console.log(i);
     }
 }
